@@ -69,7 +69,7 @@ piecemeal.
 `experiments/datasets/` is a **real directory** holding the **clean source graphs and ground
 truth** (12 files, ~1.9 MB) — **tracked in git**, byte-identical to the authors' release, which
 the FR079 rule in `HANDOFF.md` depends on. Only the two heavy things are symlinks into the shared
-`../../pose_graph_optimization_experiments/datasets/`, and both are gitignored:
+`../../pgo_experiment/datasets/`, and both are gitignored:
 
 | path | size | why not tracked |
 |---|---|---|

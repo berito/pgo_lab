@@ -3,7 +3,7 @@
 #
 # ⭐ The repo's central rule is "build ON the vendor, never IN it" — and a rule nothing
 # checks is a rule that drifts. This diffs what we hold against the pinned upstream
-# clone kept next door in pose_graph_optimization_experiments/code/, which is cloned at
+# clone kept next door in pgo_experiment/code/, which is cloned at
 # an exact commit and mounted read-only there.
 #
 # The test: does a difference change WHAT THE CODE DOES, or only WHERE IT LOOKS?
@@ -19,7 +19,7 @@
 #   usage: scripts/check_vendor.sh          exit 0 clean · 1 drift · 2 cannot check
 set -uo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-UP="$ROOT/../pose_graph_optimization_experiments/code"
+UP="$ROOT/../pgo_experiment/code"
 
 if [ ! -d "$UP" ]; then
   echo "⚠ cannot check: no pinned upstream at $UP"

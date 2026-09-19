@@ -1,4 +1,4 @@
-# pose_graph_optimization_method — thesis code
+# pgo_lab — thesis code
 
 The code side of the thesis on **robust pose-graph optimization**. It holds the reference
 implementations we verify against (`ipc/`, `taco/`), the vendored comparators (`baselines/`),
@@ -33,7 +33,7 @@ The original upstream IPC README (prerequisites, usage, citation) is preserved v
 ## Layout
 
 ```
-pose_graph_optimization_method/
+pgo_lab/
 ├── CMakeLists.txt      superbuild — stitches the four halves into one build/
 ├── HANDOFF.md          ⭐ read first — the campaign, the cardinal rule, the critical facts
 ├── TASKS.md            command-level plan (S0→S6) + the gates
@@ -69,7 +69,7 @@ pose_graph_optimization_method/
 `experiments/datasets/` holds the **clean source graphs and ground truth** (~1.9 MB, 12 files) and
 they **are tracked** — byte-identical to the authors' release, which the FR079 rule in `HANDOFF.md`
 depends on. Two heavy things are deliberately **not** tracked and appear as symlinks into the
-sibling `pose_graph_optimization_experiments/datasets/`:
+sibling `pgo_experiment/datasets/`:
 
 | path | size | why not tracked |
 |------|------|-----------------|

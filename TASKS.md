@@ -1,7 +1,7 @@
 # TASKS — correlation-aware robust PGO (experiment-first)
 
 Detailed, command-level plan. High-level phases + gates also live in the literature plan
-(`<studies>/thesis/robust_pgo/literature/TASKS.md` — literature/theory tasks only; the experiment tasks live **here**).
+(`research/pgo_classical/planning/WEEK.md` — literature/theory tasks only; the experiment tasks live **here**).
 **This repo is a superbuild** (see `docs/ATTRIBUTION.md` + `CLAUDE.md`): `ipc/` = our IPC fork (the contribution we patch);
 `baselines/` = vendored RobustOptimizationSLAM (the comparators); root `CMakeLists.txt` builds them together.
 
@@ -98,7 +98,7 @@ Status (2026-06-16 14:13 PM): **S0** ✅ build · **S1** ✅ ran — *IPC does N
 - [ ] **Final results doc** (S6, by Jul 7).
 
 ## Paths
-- **Repo root (superbuild):** `/home/lab_desktop/Documents/code_base/thesis/robust_pgo`
+- **Repo root (superbuild):** `/home/lab_desktop/Documents/code_base/research/pgo_lab`
 - **Our IPC fork (S4 patch target):** `ipc/src/consensus.cpp` (174 lines — χ² accept/reject) · tester `ipc/examples/ipc_tester_2D.cpp`
 - **TACO (S2 implement here):** new `taco/` module (authors released no code)
 - **Vendored baselines:** `baselines/` — SC, MaxMix, DCS, GNC, Huber, RRR in `robust_g2o/`; **PCM** + GTSAM tier in `robust_gtsam/`; metrics in `evaluator/`. **PCM = headline comparator** (closest prior art that reasons about consistency).
@@ -116,7 +116,7 @@ Status (2026-06-16 14:13 PM): **S0** ✅ build · **S1** ✅ ran — *IPC does N
 
 ### S0 — Build · Day 1 (DONE ✅)
 ```bash
-cd /home/lab_desktop/Documents/code_base/thesis/robust_pgo
+cd /home/lab_desktop/Documents/code_base/research/pgo_lab
 # VS Code: "Reopen in Container" (provisions g2o + GTSAM/Kimera-RPGO). Then:
 mkdir -p build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release && make -j$(nproc)
 #   add -DBUILD_GTSAM_BASELINES=ON to also build PCM tier
@@ -156,3 +156,5 @@ Mirror authors' setup (datasets · Vertigo random spoiling · paper's outlier ra
 ---
 
 **Daily log:** append one line per session to `RUN_LOG.md` (date · step · key number · next).
+
+---

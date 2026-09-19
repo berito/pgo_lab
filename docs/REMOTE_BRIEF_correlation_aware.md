@@ -15,7 +15,7 @@ Take **IPC's online property** (per-arrival consensus on a **bounded sub-indepen
 
 | Piece | What it is | What you do with it | Get it from |
 |---|---|---|---|
-| **IPC** | the online baseline (bounded subgraph + per-edge χ²) | **extend it** — this is the code you modify | your fork: `code_base/thesis/robust_pgo/ipc/` |
+| **IPC** | the online baseline (bounded subgraph + per-edge χ²) | **extend it** — this is the code you modify | your fork: `code_base/research/pgo_lab/ipc/` |
 | **DC-GM** | a **model on paper** (MATLAB/SDP, no usable code) | **reimplement its two terms** (the math only — penalty + reward) | paper: `pdfs/multi_edge/M-C_probabilistic_graphical_model/2019_Lajoie_DCGM_*.pdf` + study notes |
 | **DC-SAM** | the **online discrete-continuous solver library** (GTSAM/iSAM2-based) | **clone + use** as the solver framework | `git clone https://github.com/MarineRoboticsGroup/dcsam` (not yet in the repo) |
 
@@ -120,4 +120,4 @@ No predetermined verdict — build it, run it, read what the numbers say.
 - Gap + primary-source evidence: [`correlation_aware_problem.md`](correlation_aware_problem.md)
 - DC-GM model to port: [`../deep_analysis/multi_edge/M-C_probabilistic_graphical_model/2019_DCGM_Discrete_Continuous_Graphical_Model.md`](../deep_analysis/multi_edge/M-C_probabilistic_graphical_model/2019_DCGM_Discrete_Continuous_Graphical_Model.md)
 - DC-SAM: github.com/MarineRoboticsGroup/dcsam · arXiv:2204.11936
-- Code repo: `code_base/thesis/robust_pgo/` — `ipc/src/consensus.cpp` (the χ² decision to modify), `ipc/scripts/generateDataset.py` (generator to fork).
+- Code repo: `code_base/research/pgo_lab/` — `ipc/src/consensus.cpp` (the χ² decision to modify), `ipc/scripts/generateDataset.py` (generator to fork).

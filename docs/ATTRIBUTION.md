@@ -11,7 +11,7 @@ than inside them. No method direction is currently selected — see [`../DIRECTI
   Source: https://github.com/EmilioOlivastri/IPC
   → lives under `ipc/` in this repo.
   **Verified byte-identical to the pinned upstream clone (2026-09-07)**, which is kept next door at
-  `../../pose_graph_optimization_experiments/code/IPC`. Only `cfg/*.yaml` (the author's absolute
+  `../../pgo_experiment/code/IPC`. Only `cfg/*.yaml` (the author's absolute
   paths, unrunnable as shipped) and `CMakeLists.txt` differ. `scripts/check_vendor.sh` enforces this.
 
 - **RobustOptimizationSLAM** — Emilio Olivastri's robust-PGO baseline suite

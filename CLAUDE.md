@@ -1,13 +1,13 @@
-# pose_graph_optimization_method — the thesis contribution
+# pgo_lab — the thesis contribution
 
 ⚠ **Renamed 2026-09-07, and the old name was the problem.** It was `robust_pgo`, which
 asserts a solution family before `DIRECTION.md` has committed to one — the same mistake that
 killed `gna_pgo` (it encoded *Graph-Neural-Attention*, a method later ruled out). **Name the
-subject and whose it is; never the method.** Siblings under `code_base/thesis/`:
-`pose_graph_optimization_experiments/` (other people's code) and
-`pose_graph_optimization_math/` (the concepts, visualised).
+subject and whose it is; never the method.** Siblings under `code_base/research/`:
+`pgo_experiment/` (other people's code) and
+`pgo_visualizer/` (the concepts, visualised); learning the PGO libraries is in `code_base/learning/pgo_tools/`.
 
-The GitHub remote was renamed to match: `git@github.com:berito/pose_graph_optimization_method.git`.
+The GitHub remote was renamed to match: `git@github.com:berito/pgo_lab.git`.
 
 **What this is:** a **thesis fork of IPC** (see `docs/ATTRIBUTION.md`), extended to test whether **correlation-aware**
 decisions beat per-edge/correlation-blind robust PGO on **correlated (grouped) outliers**. Experiment-first.
@@ -32,7 +32,7 @@ decisions beat per-edge/correlation-blind robust PGO on **correlated (grouped) o
 
 ## Repo layout (monorepo superbuild)
 - `ipc/` — IPC, **and its source is byte-identical to the pinned upstream** (verified
-  2026-09-07 against `../pose_graph_optimization_experiments/code/IPC`). ⚠ It was described
+  2026-09-07 against `../pgo_experiment/code/IPC`). ⚠ It was described
   here as "our fork, the decision we patch", which **licensed the thing the rules forbid** —
   and was not what had actually been done. Only `cfg/*.yaml` (the author's absolute paths,
   unrunnable as shipped) and `CMakeLists.txt` differ. **Keep it that way:** run
@@ -112,7 +112,7 @@ scripts/check_vendor.sh      # 0 clean · 1 an unrecorded in-place edit · 2 can
 ```
 
 It diffs `ipc/` and `baselines/` against the pinned upstream clones kept next door in
-`../pose_graph_optimization_experiments/code/`. **A rule nothing checks is a rule that
+`../pgo_experiment/code/`. **A rule nothing checks is a rule that
 drifts.**
 
 ⭐ **The rule it enforces is not "never edit" — it is "never edit silently."** A genuine
@@ -145,8 +145,8 @@ and confirming it was caught.)*
 - `experiments/` — our datasets/configs/results.
 
 ## The thesis docs (the why) — in the research repo *(single home; don't restate here)*
-- Problem · candidates · decision log → `research/pose_graph_optimization/literature/thinking/DIRECTION.md`
-- Scope (in / out) → `research/pose_graph_optimization/planning/SPEC.md`
+- Problem · candidates · decision log → `research/pgo_classical/literature/thinking/DIRECTION.md`
+- Scope (in / out) → `research/pgo_classical/planning/SPEC.md`
 
 ## Discipline (thesis sprint — live deadline in `research/…/planning/TRACKER.md`, not restated here)
 Total thesis exclusivity; results over prose; writing deferred. Work the gates in order; record each gate's
@@ -155,7 +155,7 @@ verdict + key number in `RUN_LOG.md` and the decisions log. Don't drift into the
 ## Do NOT
 - Touch the abandoned GNN attempt (`code_base/archive/gna_pgo`) or the upstream reference clone `../../learning/papers_code/IPC`.
 - Commit `build/` or run outputs under `experiments/results/` (see `.gitignore`). ⚠ `experiments/datasets` is now a **symlink** to
-  `../../pose_graph_optimization_experiments/datasets` — the one shared dataset folder. It was
+  `../../pgo_experiment/datasets` — the one shared dataset folder. It was
   **broken** until 2026-09-07 (it pointed at a path that does not exist), so git reported twelve
   tracked dataset files as deleted and the repo had no data at all. **If those files show as
   deleted again, check the symlink first.**
